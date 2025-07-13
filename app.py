@@ -58,7 +58,11 @@ if uploaded_file is not None:
         predicted_class_label = class_labels.get(predicted_class_index, "Tidak Diketahui")
 
         # Menampilkan hasil prediksi
-        st.success(f'Gambar ini diprediksi memiliki: **{predicted_class_label}**')
+        if  predicted_class_index == 0:
+            st.success(f'Gambar ini diprediksi memiliki: **{predicted_class_label}**')
+        else predicted_class_index == 1:
+            st.error(f'Gambar ini diprediksi memiliki: **{predicted_class_label}**')
+        
         st.write(f"Probabilitas prediksi: {predictions[0][predicted_class_index]*100:.2f}%")
 
     except Exception as e:
