@@ -60,7 +60,7 @@ if uploaded_file is not None:
         # Menampilkan hasil prediksi
         if  predicted_class_index == 0:
             st.success(f'Gambar ini diprediksi memiliki: **{predicted_class_label}**')
-        else predicted_class_index == 1:
+        elif predicted_class_index == 1:
             st.error(f'Gambar ini diprediksi memiliki: **{predicted_class_label}**')
         
         st.write(f"Probabilitas prediksi: {predictions[0][predicted_class_index]*100:.2f}%")
