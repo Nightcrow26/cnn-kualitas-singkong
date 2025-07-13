@@ -45,7 +45,7 @@ if uploaded_file is not None:
 
     # Normalisasi jika model Anda dilatih dengan data yang dinormalisasi (misal, dibagi 255.0)
     # Jika model Anda dilatih dengan input yang dinormalisasi, aktifkan baris di bawah ini:
-    # img_array = img_array / 255.0
+    img_array = img_array / 255.0
 
     try:
         # Memprediksi kelas gambar
